@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Custom Icons Tutorial - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- s -->
+<!-- 	<script src="./kartes/pamatkarte_geojson/gis_boundary_min.geojson"></script> -->
+<!-- 	<script src="./kartes/pamatkarte_geojson/gis_water_min.geojson"></script> -->
+<!-- 	<script src="./kartes/pamatkarte_geojson/gis_major_roads_min.geojson"></script> -->
+	<!-- <script src="./kartes/pamatkarte_geojson/gis_roads_min.geojson"></script> -->
+<!-- 	<script src="./kartes/pamatkarte_geojson/gis_cities_min.geojson"></script> -->
+<!-- 	<script src="./kartes/pamatkarte_geojson/gis_major_cities_min.geojson"></script> -->
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_boundary_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_cities_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_major_cities_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_major_roads_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_roads_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_water_min.geojson"></script>
+	<script src="https://nbviewer.jupyter.org/github/agrisl/basemapgjson/blob/main/gis_waterways_min.geojson"></script>
+	
+	
+
+	
+	
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+
+			
+		}
+
+		.leaflet-tooltip.my-labels {
+  background-color: transparent;
+  font-weight: bold;
+  border: transparent;
+  box-shadow: none;
+  color:#8796ab;
+  font-family: arial;
+  text-shadow: -0.5px 0#aab5c3, 0 0.5px	#aab5c3, 0.5px 0	#aab5c3, 0 -0.5px #aab5c3;
+  font-size:smaller;
+  }
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+
+
+<script>
+ 
+
+
+
+var lat = 56.95995224466898;
+var lng = 24.554443359375004;
+var zoom = 8;
+
+	var map = L.map('map');
+//pilsetas
+
+
+
+var geojsonMarkerOptions = {
+    radius: 2,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 0,
+    opacity: 0,
+    fillOpacity: 0
+};
+
+
+
+
+
+boundry = L.geoJson(gisBoundaryMin,{
+	color:"#cccccc",
+	fillOpacity:1,
+	opacity:1,
+    weight:2
+	}).addTo(map);
+/*
+cities2 = L.geoJson(gisMajorCities,{
+	color:'#bbbbbb',
+	fillOpacity:1
+	}).addTo(map);
+*/
+	//EZERI
+
+
+	cities2 = L.geoJson(gisMajorCities,{
+	color:"#aab5c3",
+    weight: 1,
+    fillOpacity:1
+	}).addTo(map);
+
+
+
+	waterways = L.geoJson(gis_waterways_min,{
+	color:"#c8d7d4",
+    weight: 2,
+    opacity: 1
+	}).addTo(map);
+
+	
+	water = L.geoJson(gis_water_min,{
+	color:"#c8d7d4",
+    weight: 1,
+    fillOpacity:1
+	}).addTo(map);
+
+
+
+
+	// ceļi
+roads= L.geoJson(gisRoads,{
+	color:"#e3e3e3",
+    weight: 2,
+    opacity: 1
+	}).addTo(map);
+
+//Galvenie ceļi
+Mroads= L.geoJson(gisMajorRoads,{
+	color:"#e3e3e3",
+    weight: 2.5,
+    opacity: 1
+	}).addTo(map);
+
+
+cities1 = L.geoJson(gisCities,{
+	pointToLayer:function(feature,latlng){
+	return L.circleMarker(latlng, geojsonMarkerOptions).bindTooltip(feature.properties.NAMN1,{permanent: true, opacity:1, direction:"center", className: "my-labels", declutter: true,}).openTooltip();
+}}).addTo(map);
+
+
+
+//galv pilsētas
+
+//UPES
+	
+//ROBEŽA
+
+
+
+
+
+	map.setView([lat, lng],zoom);
+</script>
+
+
+
+</body>
+</html>
