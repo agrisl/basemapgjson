@@ -1,4 +1,4 @@
-var gisCities={
+{
 "type": "FeatureCollection",
 "name": "gis_cities_min",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
@@ -10,7 +10,6 @@ var gisCities={
 { "type": "Feature", "properties": { "NAMN1": "Preiļi" }, "geometry": { "type": "Point", "coordinates": [ 26.725948499220053, 56.292923000768937, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Viļāni" }, "geometry": { "type": "Point", "coordinates": [ 26.931169500397743, 56.555961501288124, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Ludza" }, "geometry": { "type": "Point", "coordinates": [ 27.731001000253286, 56.534508000890348, 0.0 ] } },
-{ "type": "Feature", "properties": { "NAMN1": "Lociki" }, "geometry": { "type": "Point", "coordinates": [ 26.643506999263789, 55.93674450066942, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Priekule" }, "geometry": { "type": "Point", "coordinates": [ 21.591469000361926, 56.451603001187692, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Auce" }, "geometry": { "type": "Point", "coordinates": [ 22.897945500331492, 56.461467500700081, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Zilupe" }, "geometry": { "type": "Point", "coordinates": [ 28.122388999211449, 56.389496500933163, 0.0 ] } },
@@ -20,7 +19,6 @@ var gisCities={
 { "type": "Feature", "properties": { "NAMN1": "Jēkabpils" }, "geometry": { "type": "Point", "coordinates": [ 25.879935999528769, 56.493351500536754, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Līvāni" }, "geometry": { "type": "Point", "coordinates": [ 26.172876499233833, 56.353634000722373, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Aknīste" }, "geometry": { "type": "Point", "coordinates": [ 25.754537499227165, 56.159614500449131, 0.0 ] } },
-{ "type": "Feature", "properties": { "NAMN1": "Malta" }, "geometry": { "type": "Point", "coordinates": [ 27.159587999824883, 56.342403501235317, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Bauska" }, "geometry": { "type": "Point", "coordinates": [ 24.184568500070398, 56.405735000440394, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Varakļāni" }, "geometry": { "type": "Point", "coordinates": [ 26.767448500269822, 56.605060500693988, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Subate" }, "geometry": { "type": "Point", "coordinates": [ 25.910814500537295, 56.007026500632996, 0.0 ] } },
@@ -73,6 +71,13 @@ var gisCities={
 { "type": "Feature", "properties": { "NAMN1": "Mazsalaca" }, "geometry": { "type": "Point", "coordinates": [ 25.058016000517515, 57.862870001112469, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Lielvārde" }, "geometry": { "type": "Point", "coordinates": [ 24.805612500395945, 56.721481500595729, 0.0 ] } },
 { "type": "Feature", "properties": { "NAMN1": "Pāvilosta" }, "geometry": { "type": "Point", "coordinates": [ 21.192233999373506, 56.889121500624, 0.0 ] } },
-{ "type": "Feature", "properties": { "NAMN1": "Vangaži" }, "geometry": { "type": "Point", "coordinates": [ 24.538749499444872, 57.091205500908892, 0.0 ] } }
+{ "type": "Feature", "properties": { "NAMN1": "Vangaži" }, "geometry": { "type": "Point", "coordinates": [ 24.538749499444872, 57.091205500908892, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Liepāja" }, "geometry": { "type": "Point", "coordinates": [ 21.01945959813153, 56.535115850872629, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Jelgava" }, "geometry": { "type": "Point", "coordinates": [ 23.716267472526866, 56.643042946338461, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Jūrmala" }, "geometry": { "type": "Point", "coordinates": [ 23.696512573327905, 56.958566770246392, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Rīga" }, "geometry": { "type": "Point", "coordinates": [ 24.10432250074188, 56.946487500757435, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Daugavpils" }, "geometry": { "type": "Point", "coordinates": [ 26.519390000133829, 55.865749501094932, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Rēzekne" }, "geometry": { "type": "Point", "coordinates": [ 27.333131647717977, 56.508234611766731, 0.0 ] } },
+{ "type": "Feature", "properties": { "NAMN1": "Durbe" }, "geometry": { "type": "Point", "coordinates": [ 21.367449476185097, 56.587383445035819, 0.0 ] } }
 ]
 }
